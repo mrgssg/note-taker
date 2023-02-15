@@ -1,8 +1,8 @@
 const express = require ('express');
-const notes = require ('.db/db.json');
+const notes = require ('./db/db.json');
 const path = require ('path');
 const uuid = require ('./helpers/uuid');
-const {getNotes, savedNotes} = require('.helpers/notesH');
+const {getNotes, savedNotes} = require('./helpers/notesH');
 
 const Port = process.env.PORT || 3001;
 
@@ -11,9 +11,13 @@ const app = express();
 // middleware
 app.use(express.json ());
 app.use(express.static('public'));
+app.use(express.urlencoded({extended: true}))
 
-// GET request
-app.get('/notes', (req, res) => res.sendfile(path.join(__dirname, '/public/notes.html'))
+// GET requests
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/public/index.html'))
+);
+
+app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
 app.get('/api/notes', (req, res) => {res.json(getNotes());
@@ -35,7 +39,7 @@ if (title && text) {
      currentNotes.push(newNote);
      savedNotes(currentNotes);
 
-     res.json(response);
+     res.json(res);
 }
      else {
         res.json('Error, please try to save again.')

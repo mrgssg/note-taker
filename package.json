@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/mrgssg/note-taker/issues"
   },
-  "homepage": "https://github.com/mrgssg/note-taker#readme"
+  "homepage": "https://github.com/mrgssg/note-taker#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
