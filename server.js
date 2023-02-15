@@ -19,7 +19,7 @@ app.get('/api/notes', (req, res) => {res.json(getNotes());
 
 // post reqs
 app.post('/api/notes', (req, res) => { 
-    savedNotes = getNotes(); 
+    currentNotes = getNotes(); 
 });
 
 // new note instructions
@@ -30,6 +30,44 @@ if (title && text) {
         title,
         text,
     };
-    savedNotes.push(newNote);
-    
+     currentNotes.push(newNote);
+     savedNotes(currentNotes);
+
+     res.json(response);
 }
+     else {
+        res.json('Error, please try to save again.')
+     };
+
+// DELETE option 
+app.delete('/api/notes/:id', (req, res) => {
+
+    let noteId = req.params.id
+    let notes = getNotes();
+    let noteDelete = notes.filter(function(item) { return item.id === noteId; });
+
+    let index = notes.findIndex(function(item, i) {
+      return item.id === noteId
+    });
+  
+      if (index > -1) {
+      notes.splice(index, 1);
+    }
+  
+    // save any updated notes to db
+    savedNotes(notes);
+  
+    // return a completed response
+    const response = {
+      status: 'deleted',
+      body: noteDelete,
+    };
+  
+    res.json(response);
+  
+  });
+  
+  app.listen(PORT, () =>
+    console.log(`App listening at http://localhost:${PORT} 🚀`)
+  );
+
