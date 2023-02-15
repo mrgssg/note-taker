@@ -1,0 +1,24 @@
+{
+  "name": "note-taker",
+  "version": "1.0.0",
+  "description": "A note taker app used to write and take notes.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrgssg/note-taker.git"
+  },
+  "keywords": [
+    "note",
+    "taker"
+  ],
+  "author": "mrgssg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrgssg/note-taker/issues"
+  },
+  "homepage": "https://github.com/mrgssg/note-taker#readme"
+}
