@@ -15,5 +15,7 @@
 <br>
 
 ## Links
-### (deployed application)
-<a href=https://github.com/mrgssg/note-taker> Github Repository
+### 
+<a href=  https://mrgssg.github.io/note-taker/ > Deployed Site
+
+<a href= https://github.com/mrgssg/note-taker> Github Repository
