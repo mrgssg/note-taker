@@ -1,6 +1,8 @@
 const express = require ('express');
 const notes = require ('.db/db.json');
 const path = require ('path');
+const uuid = require ('./helpers/uuid');
+const {getNotes, savedNotes} = require('.helpers/notesH');
 
 const Port = process.env.PORT || 3001;
 
@@ -26,7 +28,7 @@ app.post('/api/notes', (req, res) => {
 const {title, text} = req.body;
 if (title && text) {
     const newNote = {
-        id: nnid(),
+        id: uuid(),
         title,
         text,
     };
@@ -42,12 +44,12 @@ if (title && text) {
 // DELETE option 
 app.delete('/api/notes/:id', (req, res) => {
 
-    let noteId = req.params.id
+    let notesId = req.params.id
     let notes = getNotes();
     let noteDelete = notes.filter(function(item) { return item.id === noteId; });
 
     let index = notes.findIndex(function(item, i) {
-      return item.id === noteId
+      return item.id === notesId
     });
   
       if (index > -1) {
