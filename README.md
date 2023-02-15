@@ -8,9 +8,9 @@
 ## Images
 ### The following images are an example the apps appearance and functionality:
 
-<img src="./assets/11-express-homework-demo-01.png" width = "400px">
+<img src="public/assets/11-express-homework-demo-01.png" width = "400px">
 
-<img src="./assets/11-express-homework-demo-02.png" width = "400px">
+<img src="public/assets/11-express-homework-demo-02.png" width = "400px">
 
 <br>
 
