@@ -8,10 +8,11 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-// middleware
-app.use(express.json ());
-app.use(express.static('public'));
+// middleware to handle data parsing
 app.use(express.urlencoded({extended: true}))
+app.use(express.json ());
+
+app.use(express.static('public'));
 
 // GET requests
 app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, '/public/notes.html'))
