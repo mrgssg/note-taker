@@ -14,10 +14,8 @@
 
 <br>
 
-## Links
+## Links to Access Deployed Site and Repository
 ### 
-<!-- add walk through video here -->
-
-<a href=  https://note-taker-022123.herokuapp.com> Deployed through Heroku
+<a href=  https://note-taker-022123.herokuapp.com> Deployed Application
 
 <a href= https://github.com/mrgssg/note-taker> Github Repository
