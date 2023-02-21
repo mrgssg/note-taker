@@ -18,6 +18,6 @@
 ### 
 <!-- add walk through video here -->
 
-<a href=  https://mrgssg.github.io/note-taker/ > Deployed Site
+<a href=  https://note-taker-022123.herokuapp.com> Deployed through Heroku
 
 <a href= https://github.com/mrgssg/note-taker> Github Repository
